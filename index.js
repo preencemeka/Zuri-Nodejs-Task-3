@@ -11,7 +11,6 @@ const stringifiedData = JSON.stringify(fetchedData);
 
 //Write  fetched data
 
-fs.writeFile('./result/posts.json', stringifiedData, (err) => {
-    if (err) throw err;
+fs.writeFile('./result/posts.json', stringifiedData, () => {
     console.log('File written');
 })
